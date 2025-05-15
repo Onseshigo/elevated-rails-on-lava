@@ -1,0 +1,14 @@
+{
+	"name": "elevated-rails-on-lava",
+	"version": "1.0.0",
+	"title": "Elevated rails on lava",
+	"author": "Onseshigo",
+	"factorio_version": "2.0",
+	"dependencies": [
+		"base >= 2.0",
+		"space-age >= 2.0",
+		"elevated-rails >= 2.0"	
+	],
+	"description": "Allows to build elevated rails on the lava after researching technology \"Rail support foundations\".",
+	"contact": "https://discord.com/users/805153774787887115"
+}
