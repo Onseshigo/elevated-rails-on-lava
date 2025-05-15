@@ -6,7 +6,7 @@ table.insert(
     icons =
     {
       {
-        icon = "__elevated_rails_on_lava__/graphics/icons/technology/effect/effect-rail-support-on-lava.png",
+        icon = "__elevated-rails-on-lava__/graphics/icons/technology/effect/effect-rail-support-on-lava.png",
         icon_size = 64,
         icon_mipmaps = 1,
       }
