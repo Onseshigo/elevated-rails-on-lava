@@ -6,11 +6,11 @@ for tile in changed_tiles_setting:gmatch("([^,]+)") do
     table.insert(changed_tiles, tile:match("^%s*(.-)%s*$"))
 end
 
-for _, value in ipairs(changed_tiles) do
-    if data.raw.tile[value] then
-        data.raw.tile[value].collision_mask.layers["rail"] = nil
-        data.raw.tile[value].collision_mask.layers["rail_support"] = true
+for _, tile in ipairs(changed_tiles) do
+    if data.raw.tile[tile] then
+        data.raw.tile[tile].collision_mask.layers["rail"] = nil
+        data.raw.tile[tile].collision_mask.layers["rail_support"] = true
     else
-        log("tile not found: \"" .. value .. "\"")
+        log("tile not found: \"" .. tile .. "\"")
     end
 end
