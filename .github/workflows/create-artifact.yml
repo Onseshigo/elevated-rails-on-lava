@@ -3,6 +3,12 @@ name: Create artifact
 on:
   workflow_dispatch:
   push:
+    paths:
+      - '**.lua'
+      - '**.png'
+      - '**.cfg'
+      - '**.json'
+      - '**.txt'
 
 jobs:
   create_artifact:
