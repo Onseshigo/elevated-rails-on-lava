@@ -54,7 +54,8 @@ jobs:
           
       - name: Create mod archive
         run: |
-          zip "${{ steps.prepare_mod.outputs.art_dir }}.zip" "${{ steps.prepare_mod.outputs.out_dir }}"
+          cd "${{ steps.prepare_mod.outputs.out_dir }}"
+          zip -r "${{ steps.prepare_mod.outputs.art_dir }}.zip" "."
         
       - name: Create release
         uses: softprops/action-gh-release@v2
@@ -62,5 +63,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: "v${{ steps.mod_info.outputs.version }}-${{ github.run_id }}"
-          files: "${{ steps.prepare_mod.outputs.art_dir }}.zip"
+          files: "${{ steps.prepare_mod.outputs.out_dir }}/${{ steps.prepare_mod.outputs.art_dir }}.zip"
           token: $GITHUB_TOKEN
