@@ -6,9 +6,12 @@ on:
 jobs:
   update-translations:
     runs-on: ubuntu-latest
+    
+    env:
+      ACTION_REPOSITORY: ${{ github.action_repository }}
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Run a one-line script
-        run: echo $GITHUB_WORKSPACE
+        run: echo $ACTION_REPOSITORY
