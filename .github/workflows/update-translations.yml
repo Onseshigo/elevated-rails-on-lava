@@ -11,7 +11,8 @@ jobs:
       ACTION_REPOSITORY: ${{ github.action_repository }}
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Run a one-line script
-        run: echo $ACTION_REPOSITORY
+      - name: Test
+        run: echo "$ACTION_REPOSITORY"
