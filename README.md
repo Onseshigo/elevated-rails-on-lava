@@ -1,5 +1,5 @@
 # Elevated Rails on Lava
-Mod for Factorio that allows to build elevated rails on the lava after researching technology "Rail support foundations".
+Mod for Factorio that allows to build elevated rails on the lava after researching technology "**Rail support foundations**".
 
 Adds visual icon to the technology to indicate the change.
 Has setting for which tiles needs to be changed with the technology research.
