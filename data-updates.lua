@@ -7,6 +7,10 @@ for tile in changed_tiles_setting:gmatch("([^,]+)") do
 end
 
 for _, value in ipairs(changed_tiles) do
-    data.raw.tile[value].collision_mask.layers["rail"] = nil
-    data.raw.tile[value].collision_mask.layers["rail_support"] = true
+    if data.raw.tile[value] then
+        data.raw.tile[value].collision_mask.layers["rail"] = nil
+        data.raw.tile[value].collision_mask.layers["rail_support"] = true
+    else
+        log("tile not found: \"" .. value .. "\"")
+    end
 end

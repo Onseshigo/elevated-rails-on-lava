@@ -5,6 +5,8 @@ Date: 17. 05. 2025
     - Renamed locale files.
     - Capitalized mod title.
     - Added description for mod settings.
+  Minor Features:
+    - Added check if tile exist.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 16. 05. 2025
