@@ -6,13 +6,11 @@ on:
 jobs:
   update-translations:
     runs-on: ubuntu-latest
-    
-    env:
-      ACTION_REPOSITORY: ${{ github.action_repository }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Test
-        run: echo "$ACTION_REPOSITORY"
+        
+      - name: Update translations
+        run: |
+          curl -X GET "https://factorio-mods-localization.fly.dev/api/triggerUpdate?repo=${{ github.repository }}"
