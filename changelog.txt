@@ -3,6 +3,8 @@ Version: 1.1.2
 Date: ????
   Changes:
     - Changed thumbnail size to 144x144px.
+  Locale:
+    - Added technology icon to mod description.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 17. 05. 2025
