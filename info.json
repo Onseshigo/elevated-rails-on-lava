@@ -6,6 +6,7 @@
 	"factorio_version": "2.0",
 	"dependencies": [
 		"base >= 2.0",
+		"space-age >= 2.0",
 		"elevated-rails >= 2.0"	
 	],
 	"description": "Allows to build elevated rails on the lava after researching technology \"Rail support foundations\".\nAdds visual icon to the technology to indicate the change.\nHas setting for which tiles needs to be included to the technology.",
