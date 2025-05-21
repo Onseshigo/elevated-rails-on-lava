@@ -1,10 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: ????
+  Changes:
+    - Changed thumbnail size to 144x144px.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 17. 05. 2025
   Locale:
     - Renamed locale files.
     - Capitalized mod title.
-    - Added description for mod settings.
+    - Added descriptions for mod settings.
   Minor Features:
     - Added check if tile exist.
   Changes:
