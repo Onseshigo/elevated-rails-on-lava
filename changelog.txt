@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
-Date: ????
+Date: 28. 05. 2025
   Changes:
     - Changed thumbnail size to 144x144px.
+    - Removed mipmaps as it's obsolete in 2.0 to do them manually.
   Locale:
     - Added technology icon to mod description.
 ---------------------------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ Date: 17. 05. 2025
 Version: 1.1.0
 Date: 16. 05. 2025
   Features:
-    - Added setting for which tiles to change and for technology effect icon.
+    - Added setting for which tiles to change and for including technology effect icon to the technology.
   Translation:
     - Localized mod page.
 ---------------------------------------------------------------------------------------------------
