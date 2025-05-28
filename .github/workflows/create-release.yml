@@ -94,3 +94,16 @@ jobs:
           files: "${{ steps.prepare_mod.outputs.out_dir }}/${{ steps.prepare_mod.outputs.art_dir }}.zip"
           body: "${{ steps.extract_entry.outputs.changelog }}"
           token: $GITHUB_TOKEN
+
+      - name: Upload release
+        env:
+          FACTORIO_API_KEY: ${{ secrets.FACTORIO_API_KEY }}
+        run: |
+          RESPONSE=$( \
+            curl --request POST \
+              --header "Authorization: Bearer $FACTORIO_API_KEY" \
+              --url "https://mods.factorio.com/api/v2/mods/releases/init_upload" \
+              --data '{"mod": ${{ steps.mod_info.outputs.name }}}' \
+              --files "${{ steps.prepare_mod.outputs.out_dir }}/${{ steps.prepare_mod.outputs.art_dir }}.zip" \
+          )
+          echo "Response Code: $RESPONSE"
