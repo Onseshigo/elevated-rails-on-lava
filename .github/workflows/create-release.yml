@@ -101,7 +101,7 @@ jobs:
           FACTORIO_API_KEY: ${{ secrets.FACTORIO_API_KEY }}
         run: |
           RESPONSE=$( \
-            curl -v -i --request POST \
+            curl -v -i -L --request POST \
               --header "Authorization: Bearer $FACTORIO_API_KEY" \
               --url "https://mods.factorio.com/api/v2/mods/releases/init_upload" \
               -F 'mod=${{ steps.mod_info.outputs.name }}' \
