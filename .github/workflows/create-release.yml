@@ -101,9 +101,11 @@ jobs:
           FACTORIO_API_KEY: ${{ secrets.FACTORIO_API_KEY }}
         run: |
           RESPONSE=$( \
-            curl -v -i -L --request POST \
+            curl -w "%{http_code}" \
+              --request POST \
               --header "Authorization: Bearer $FACTORIO_API_KEY" \
               --url "https://mods.factorio.com/api/v2/mods/releases/init_upload" \
               -F 'mod=${{ steps.mod_info.outputs.name }}' \
-              -F 'file=@"${{ steps.prepare_mod.outputs.out_dir }}/${{ steps.prepare_mod.outputs.art_dir }}.zip"' \
+              -F 'file=@${{ steps.prepare_mod.outputs.out_dir }}/${{ steps.prepare_mod.outputs.art_dir }}.zip' \
           )
+          echo "Response code: $RESPONSE"
