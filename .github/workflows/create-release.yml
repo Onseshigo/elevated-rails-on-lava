@@ -104,6 +104,6 @@ jobs:
               --header "Authorization: Bearer $FACTORIO_API_KEY" \
               --url "https://mods.factorio.com/api/v2/mods/releases/init_upload" \
               --data '{"mod": ${{ steps.mod_info.outputs.name }}}' \
-              --files "${{ steps.prepare_mod.outputs.out_dir }}/${{ steps.prepare_mod.outputs.art_dir }}.zip" \
+              -F 'file=@"${{ steps.prepare_mod.outputs.out_dir }}/${{ steps.prepare_mod.outputs.art_dir }}.zip"' \
           )
           echo "Response Code: $RESPONSE"
