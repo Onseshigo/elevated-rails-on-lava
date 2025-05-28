@@ -50,6 +50,8 @@ jobs:
           echo "changelog<<EOF" >> $GITHUB_OUTPUT
           echo "$ENTRY" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+          
+          echo "$ENTRY"
         
       - name: Make directory and copy files
         id: prepare_mod
