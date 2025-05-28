@@ -30,11 +30,11 @@ jobs:
           
           ENTRY=$(awk -v version="$VERSION" '
             BEGIN {
-              RS="-+\r\n";
+              RS="-+\n";
               FS = "\n";
             }
             {
-              if ($1 == "Version: " version "\r") {
+              if ($1 == "Version: " version) {
                 print "# " $1;
                 # print "### " $2;
                 
@@ -105,7 +105,7 @@ jobs:
             curl --request POST \
               --header "Authorization: Bearer $FACTORIO_API_KEY" \
               --url "https://mods.factorio.com/api/v2/mods/releases/init_upload" \
-              --data '{"mod": ${{ steps.mod_info.outputs.name }}}' \
+              -F 'mod="${{ steps.mod_info.outputs.name }}"' \
               -F 'file=@"${{ steps.prepare_mod.outputs.out_dir }}/${{ steps.prepare_mod.outputs.art_dir }}.zip"' \
           )
           echo "Response Code: $RESPONSE"
