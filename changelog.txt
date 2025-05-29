@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
-Date: 28. 05. 2025
+Date: 29. 05. 2025
   Changes:
     - Changed thumbnail size to 144x144px.
     - Removed mipmaps as it's obsolete in 2.0 to do them manually.
